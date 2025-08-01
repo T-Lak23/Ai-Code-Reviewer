@@ -21,7 +21,7 @@ export default function CodeEdit({ loading, prompt, setPrompt, reviewCode }) {
         <button
           onClick={reviewCode}
           disabled={loading}
-          className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded text-lg"
+          className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded text-lg disabled:bg-gray-400"
         >
           Review Code
         </button>

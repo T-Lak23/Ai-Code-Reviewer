@@ -3,7 +3,7 @@ import prism from "prismjs";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "highlight.js/styles/github-dark.css";
-import Header from "./components/Header";
+import Header from "./components/Nav";
 import CodeEdit from "./components/CodeEdit";
 import Display from "./components/Display";
 import Footer from "./components/Footer";
@@ -35,10 +35,7 @@ function App() {
     }, 1500);
     setLoading(true);
     try {
-      const response = await axios.post(
-        "https://jscodereviewer.onrender.com/",
-        { prompt }
-      );
+      const response = await axios.post("/ai", { prompt });
       clearInterval(interval);
       setData(response.data);
     } catch (err) {

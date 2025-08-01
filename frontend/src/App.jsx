@@ -37,7 +37,10 @@ function App() {
     }, 1500);
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:3000/", { prompt });
+      const response = await axios.post(
+        "https://jscodereviewer.onrender.com/",
+        { prompt }
+      );
       clearInterval(interval);
       setData(response.data);
     } catch (err) {

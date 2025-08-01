@@ -2,7 +2,7 @@ import Editor from "react-simple-code-editor";
 import prism from "prismjs";
 import "prismjs/components/prism-javascript";
 
-export default function CodeEdit({ prompt, setPrompt, reviewCode }) {
+export default function CodeEdit({ loading, prompt, setPrompt, reviewCode }) {
   return (
     <div className="bg-zinc-900 text-white flex flex-col rounded-lg">
       <div className="flex-1 overflow-auto p-4">
@@ -20,6 +20,7 @@ export default function CodeEdit({ prompt, setPrompt, reviewCode }) {
       <div className="p-4 flex justify-center">
         <button
           onClick={reviewCode}
+          disabled={loading}
           className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded text-lg"
         >
           Review Code

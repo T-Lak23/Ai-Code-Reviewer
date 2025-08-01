@@ -56,6 +56,7 @@ function App() {
           prompt={prompt}
           setPrompt={setPrompt}
           reviewCode={reviewCode}
+          loading={loading}
         />
         <Display
           loading={loading}

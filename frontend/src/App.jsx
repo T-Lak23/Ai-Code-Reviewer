@@ -1,7 +1,5 @@
-import "./App.css";
 import "prismjs/themes/prism-tomorrow.css";
 import prism from "prismjs";
-import "prismjs/components/prism-javascript";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "highlight.js/styles/github-dark.css";

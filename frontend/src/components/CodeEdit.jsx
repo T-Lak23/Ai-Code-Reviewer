@@ -1,7 +1,6 @@
 import Editor from "react-simple-code-editor";
 import prism from "prismjs";
 import "prismjs/components/prism-javascript";
-import "prismjs/themes/prism-tomorrow.css";
 
 export default function CodeEdit({ prompt, setPrompt, reviewCode }) {
   return (

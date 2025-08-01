@@ -3,7 +3,7 @@ import prism from "prismjs";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "highlight.js/styles/github-dark.css";
-import Header from "./components/header";
+import Header from "./components/Header";
 import CodeEdit from "./components/CodeEdit";
 import Display from "./components/Display";
 import Footer from "./components/Footer";

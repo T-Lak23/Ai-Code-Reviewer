@@ -1,4 +1,4 @@
-export function Header() {
+export default function Header() {
   return (
     <nav className="w-full bg-black text-white font-mono shadow-md py-4">
       <h1 className="text-center text-2xl font-bold underline decoration-dotted underline-offset-5">

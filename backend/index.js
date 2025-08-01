@@ -5,7 +5,7 @@ const cors = require("cors");
 const path = require("path");
 
 const ai = require("./routes/ai.routes");
-app.use(express.static(path.join(__dirname, "frontend/dist")));
+app.use(express.static(path.join(__dirname, "..", "frontend", "dist")));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

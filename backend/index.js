@@ -5,16 +5,21 @@ const cors = require("cors");
 const path = require("path");
 
 const ai = require("./routes/ai.routes");
-app.use(express.static(path.join(__dirname, "..", "frontend", "dist")));
+// app.use(express.static(path.join(__dirname, "..", "frontend", "dist")));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.CLIENT_ORIGIN || "http://localhost:5173",
+    credentials: true,
+  })
+);
 app.use("/", ai);
 
-app.all(/(.*)/, (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "frontend", "dist", "index.html"));
-});
+// app.all(/(.*)/, (req, res) => {
+//   res.sendFile(path.join(__dirname, "..", "frontend", "dist", "index.html"));
+// });
 
 const PORT = process.env.PORT || 3000;
 

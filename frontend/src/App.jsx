@@ -35,7 +35,9 @@ function App() {
     }, 1500);
     setLoading(true);
     try {
-      const response = await axios.post("/ai", { prompt });
+      const response = await axios.post("http://localhost:3000/ai", {
+        prompt,
+      });
       clearInterval(interval);
       setData(response.data);
     } catch (err) {

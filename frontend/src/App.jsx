@@ -35,7 +35,7 @@ function App() {
     }, 1500);
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:3000/ai", {
+      const response = await axios.post("https://ai-code-reviewer-backend-ize4.onrender.com/ai", {
         prompt,
       });
       clearInterval(interval);
